@@ -13,8 +13,9 @@
   tmuxEnable = false;
   alacrittyEnable = false;
   weztermEnable = false;
-  ghosttyEnable = false;
+  ghosttyEnable = true;
   vscodeEnable = true;
+  cursorEnable = false;
   # Note: This is evil-helix with VIM keybindings by default
   helixEnable = false;
   #To install: Enable here, zcli rebuild, then run zcli doom install
@@ -34,7 +35,7 @@
 
   # Bar/Shell Settings
   # Choose between noctalia or waybar
-  barChoice = "noctalia";
+  barChoice = "waybar";
 
   # Waybar Settings (used when barChoice = "waybar")
   clock24h = false;
@@ -65,7 +66,7 @@
   # Kitty, ghostty, wezterm, aalacrity
   # Note: kitty, wezterm, alacritty have to be enabled in `variables.nix`
   # Setting it here does not enable it. Kitty is installed by default
-  terminal = "kitty"; # Set Default System Terminal
+  terminal = "ghostty"; # Set Default System Terminal
 
   keyboardLayout = "us,ru";
   keyboardVariant = "";
@@ -95,7 +96,7 @@
   # Default background
   # Add new images to ~/zaneyos/wallpapers
   #stylixImage = ../../wallpapers/mountainscapedark.jpg;
-  stylixImage = ../../wallpapers/snowflakes.jpg;
+  stylixImage = ../../wallpapers/maksimum.jpg;
   #stylixImage = ../../wallpapers/Anime-Purple-eyes.png;
   #stylixImage = ../../wallpapers/Rainnight.jpg;
   #stylixImage = ../../wallpapers/zaney-wallpaper.jpg;
@@ -104,7 +105,7 @@
 
   # Set Waybar
   #  Available Options:
-  #waybarChoice = ../../modules/home/waybar/waybar-curved.nix;
+  waybarChoice = ../../modules/home/waybar/waybar-curved.nix;
   #waybarChoice = ../../modules/home/waybar/waybar-ddubs.nix;
   #waybarChoice = ../../modules/home/waybar/waybar-ddubs-2.nix;
   #waybarChoice = ../../modules/home/waybar/waybar-simple.nix;
@@ -117,7 +118,7 @@
   #waybarChoice = ../../modules/home/waybar/waybar-ddubsos-v1.nix;
   #waybarChoice = ../../modules/home/waybar/waybar-mecha.nix;
   #waybarChoice = ../../modules/home/waybar/waybar-jak-catppuccin.nix;
-  waybarChoice = ../../modules/home/waybar/waybar-jak-catppuccin-v2.nix;
+  #waybarChoice = ../../modules/home/waybar/waybar-jak-catppuccin-v2.nix;
   #waybarChoice = ../../modules/home/waybar/waybar-jak-ml4w-modern.nix;
   #waybarChoice = ../../modules/home/waybar/waybar-jak-oglo-simple.nix;
   #waybarChoice = ../../modules/home/waybar/waybar-jwt-catppuccin.nix;

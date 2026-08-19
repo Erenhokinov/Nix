@@ -60,14 +60,6 @@
     version = codeRunnerVer;
     sha256 = pkgs.lib.fakeSha256;
   };
-
-  # Winter is Coming — cool blue/grey/white theme, matches the snowy night wallpaper
-  winterIsComingExts = extOrMarketplace {
-    publisher = "johnpapa";
-    name = "winteriscoming";
-    version = "1.4.4";
-    sha256 = pkgs.lib.fakeSha256;
-  };
 in {
   programs.vscode = {
     enable = true;
@@ -89,14 +81,13 @@ in {
           ++ hyprlangExts
           ++ hyprlsExts
           ++ neroHyprlandExts
-          ++ codeRunnerExts
-          ++ winterIsComingExts;
+          ++ codeRunnerExts;
         userSettings = lib.mkForce {
-          "workbench.colorTheme" = "Winter is Coming (Dark Blue)";
-          "workbench.iconTheme" = "catppuccin-mocha";
+          "workbench.colorTheme" = "Catppuccin Macchiato";
+          "workbench.iconTheme" = "catppuccin-macchiato";
           "window.autoDetectColorScheme" = true;
-          "workbench.preferredDarkColorTheme" = "Winter is Coming (Dark Blue)";
-          "workbench.preferredLightColorTheme" = "Winter is Coming (Light)";
+          "workbench.preferredDarkColorTheme" = "Catppuccin Macchiato";
+          "workbench.preferredLightColorTheme" = "Catppuccin Latte";
         };
       };
     };

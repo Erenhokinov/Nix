@@ -27,11 +27,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    ayugram-desktop = {
-      type = "git";
-      submodules = true;
-      url = "https://github.com/ndfined-crp/ayugram-desktop/";
-    };
+#    ayugram-desktop = {
+ #     type = "git";
+  #    submodules = true;
+   #   url = "https://github.com/ndfined-crp/ayugram-desktop/";
+    #};
 
     spicetify-nix = {
       url = "github:Gerg-L/spicetify-nix";
@@ -60,7 +60,7 @@
     alejandra,
     spicetify-nix,
     aagl,
-    ayugram-desktop,
+#    ayugram-desktop,
     ...
   } @ inputs: let
     system = "x86_64-linux";

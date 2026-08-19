@@ -24,7 +24,6 @@ in {
       ./bash.nix
       ./bashrc-personal.nix
       ./overview.nix
-      ./editors/vscode.nix
       ./python.nix
       ./cli/bat.nix
       ./cli/btop.nix
@@ -61,8 +60,9 @@ in {
       ./zen-browser.nix
       ./zoxide.nix
       ./zsh
+      ./editors/vscode.nix
       ./qutebrowser.nix
-      ./ayugram-desktop.nix
+      #      ./ayugram-desktop.nix
       ./discord.nix
       ./spicetify-nix.nix
     ]

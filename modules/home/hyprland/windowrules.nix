@@ -61,6 +61,12 @@ _: {
       }
 
       windowrule {
+        name = cursor
+        match:class = ^([Cc]ursor|[Cc]ursor-url-handler)$
+        tag = +projects
+      }
+
+      windowrule {
         name = Discord
         match:class = ^([Dd]iscord|[Ww]ebCord|[Vv]esktop)$
         tag = +im
