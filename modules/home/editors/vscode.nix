@@ -5,14 +5,11 @@
 }: let
   inherit (pkgs.lib) attrByPath;
 
-  # Optional versions; set these to real versions to enable marketplace fetches.
-  hyprlangVer = "0.0.3"; # fireblast.hyprlang-vscode
-  hyprlsVer = "0.1.2"; # ewen-lbh.vscode-hyprls
-  neroHyprlandVer = "0.0.2"; # amarcos1337.nero-hyprland
-  codeRunnerVer = "0.12.4"; # formulahendry.code-runner
+  hyprlangVer = "0.0.3";
+  hyprlsVer = "0.1.2";
+  neroHyprlandVer = "0.0.2";
+  codeRunnerVer = "0.12.4";
 
-  # Helper: prefer Open VSX (pkgs.vscode-extensions). If missing and a version is
-  # provided, fetch from the VSCode Marketplace using extensionsFromVscodeMarketplace.
   extOrMarketplace = {
     publisher,
     name,
@@ -68,6 +65,7 @@ in {
         extensions =
           (with pkgs.vscode-extensions; [
             catppuccin.catppuccin-vsc
+            catppuccin.catppuccin-vsc-icons # Catppuccin file icons (matches theme instead of default)
             bbenoist.nix
             kamadorueda.alejandra
             jeff-hykin.better-nix-syntax
@@ -77,17 +75,59 @@ in {
             tamasfe.even-better-toml
             zainchen.json
             shd101wyy.markdown-preview-enhanced
+
+            # --- visual/quality-of-life additions ---
+            usernamehw.errorlens # inline error/warning text instead of just squiggles
+            oderwat.indent-rainbow # colored indent guides, easy to scan nested code
+            gruntfuggly.todo-tree # TODO/FIXME comments surfaced in a sidebar
+            aaron-bond.better-comments # color-coded comment annotations (!, ?, TODO)
+            eamodio.gitlens # inline blame, history, richer git integration
+            editorconfig.editorconfig
+            streetsidesoftware.code-spell-checker
+            naumovs.color-highlight # shows a color swatch next to hex/rgb values
+            formulahendry.auto-rename-tag
           ])
           ++ hyprlangExts
           ++ hyprlsExts
           ++ neroHyprlandExts
           ++ codeRunnerExts;
+
         userSettings = lib.mkForce {
           "workbench.colorTheme" = "Catppuccin Macchiato";
           "workbench.iconTheme" = "catppuccin-macchiato";
           "window.autoDetectColorScheme" = true;
           "workbench.preferredDarkColorTheme" = "Catppuccin Macchiato";
           "workbench.preferredLightColorTheme" = "Catppuccin Latte";
+
+          # Typography
+          "editor.fontFamily" = "'JetBrainsMono Nerd Font', 'monospace'";
+          "editor.fontLigatures" = true;
+          "editor.fontSize" = 14;
+          "terminal.integrated.fontFamily" = "'JetBrainsMono Nerd Font Mono'";
+          "terminal.integrated.fontSize" = 13;
+
+          # Motion / feel
+          "editor.cursorBlinking" = "phase";
+          "editor.cursorSmoothCaretAnimation" = "on";
+          "editor.smoothScrolling" = true;
+          "workbench.list.smoothScrolling" = true;
+          "terminal.integrated.smoothScrolling" = true;
+
+          # Structure/readability
+          "editor.bracketPairColorization.enabled" = true;
+          "editor.guides.bracketPairs" = true;
+          "editor.guides.indentation" = true;
+          "editor.stickyScroll.enabled" = true;
+          "editor.minimap.enabled" = true;
+          "editor.minimap.renderCharacters" = false;
+          "editor.minimap.maxColumn" = 80;
+          "breadcrumbs.enabled" = true;
+
+          # Layout polish
+          "workbench.layoutControl.enabled" = false;
+          "workbench.activityBar.location" = "top";
+          "window.titleBarStyle" = "custom";
+          "workbench.tree.indent" = 16;
         };
       };
     };

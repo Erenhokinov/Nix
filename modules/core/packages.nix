@@ -69,7 +69,7 @@ in {
       gnumake # Needed for emacs
       gpu-screen-recorder # needed for noctalia-shell
       power-profiles-daemon # needed for noctalia-shell power cycle
-      ayugram-desktop # needed for noctalia-shell
+      materialgram
       mesa-demos # needed for inxi diag util
       tuigreet # The Login Manager (Sometimes Referred To As Display Manager)
       htop # Simple Terminal Based System Monitor

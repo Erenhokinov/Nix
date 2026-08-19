@@ -79,7 +79,7 @@ in {
     xwayland = {
       enable = true;
     };
-    settings = lib.mkForce {
+    settings = {
       input =
         {
           kb_layout = hyprKbLayout;

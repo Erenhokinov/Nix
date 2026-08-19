@@ -6,8 +6,8 @@ _: {
     waybar.enable = true;
     rofi.enable = true;
     hyprland.enable = true;
-    hyprlock.enable = true;
-    ghostty.enable = true;
+    hyprlock.enable = false;
+    ghostty.enable = false;
     qt = {
       enable = true;
       platform = "qtct";

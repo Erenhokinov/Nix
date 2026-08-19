@@ -1,6 +1,7 @@
 {
   pkgs,
   config,
+  lib,
   ...
 }: {
   programs = {
@@ -13,11 +14,11 @@
         icon-theme = "Papirus";
         font = "JetBrainsMono Nerd Font Mono 12";
         drun-display-format = "{icon} {name}";
-        display-drun = " Apps";
-        display-run = " Run";
-        display-filebrowser = " File";
+        display-drun = " Apps";
+        display-run = " Run";
+        display-filebrowser = " File";
       };
-      theme = let
+      theme = lib.mkForce (let
         inherit (config.lib.formats.rasi) mkLiteral;
       in {
         "*" = {
@@ -201,7 +202,7 @@
           background-color = mkLiteral "@bg";
           text-color = mkLiteral "@foreground";
         };
-      };
+      });
     };
   };
 }
