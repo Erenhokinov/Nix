@@ -57,6 +57,13 @@
     version = codeRunnerVer;
     sha256 = pkgs.lib.fakeSha256;
   };
+  synthwaveExts = extOrMarketplace {
+  publisher = "RobbOwen";
+  name = "synthwave-vscode";
+  version = "0.1.20";
+  sha256 = "sha256-J8igs+SQn967OK0PLNZtV9IOJRqwd+q9vmZ+p9eKSoU=";
+};
+  };
 in {
   programs.vscode = {
     enable = true;
@@ -64,8 +71,6 @@ in {
       default = {
         extensions =
           (with pkgs.vscode-extensions; [
-            catppuccin.catppuccin-vsc
-            catppuccin.catppuccin-vsc-icons # Catppuccin file icons (matches theme instead of default)
             bbenoist.nix
             kamadorueda.alejandra
             jeff-hykin.better-nix-syntax
@@ -77,43 +82,40 @@ in {
             shd101wyy.markdown-preview-enhanced
 
             # --- visual/quality-of-life additions ---
-            usernamehw.errorlens # inline error/warning text instead of just squiggles
-            oderwat.indent-rainbow # colored indent guides, easy to scan nested code
-            gruntfuggly.todo-tree # TODO/FIXME comments surfaced in a sidebar
-            aaron-bond.better-comments # color-coded comment annotations (!, ?, TODO)
-            eamodio.gitlens # inline blame, history, richer git integration
+            usernamehw.errorlens
+            oderwat.indent-rainbow
+            gruntfuggly.todo-tree
+            aaron-bond.better-comments
+            eamodio.gitlens
             editorconfig.editorconfig
             streetsidesoftware.code-spell-checker
-            naumovs.color-highlight # shows a color swatch next to hex/rgb values
+            naumovs.color-highlight
             formulahendry.auto-rename-tag
+            pkief.material-icon-theme # matches SynthWave's neon vibe far better than default icons
           ])
           ++ hyprlangExts
           ++ hyprlsExts
           ++ neroHyprlandExts
-          ++ codeRunnerExts;
+          ++ codeRunnerExts
+          ++ synthwaveExts;
 
         userSettings = lib.mkForce {
-          "workbench.colorTheme" = "Catppuccin Macchiato";
-          "workbench.iconTheme" = "catppuccin-macchiato";
-          "window.autoDetectColorScheme" = true;
-          "workbench.preferredDarkColorTheme" = "Catppuccin Macchiato";
-          "workbench.preferredLightColorTheme" = "Catppuccin Latte";
+          "workbench.colorTheme" = "SynthWave '84";
+          "workbench.iconTheme" = "material-icon-theme";
+          "window.autoDetectColorScheme" = false;
 
-          # Typography
           "editor.fontFamily" = "'JetBrainsMono Nerd Font', 'monospace'";
           "editor.fontLigatures" = true;
           "editor.fontSize" = 14;
           "terminal.integrated.fontFamily" = "'JetBrainsMono Nerd Font Mono'";
           "terminal.integrated.fontSize" = 13;
 
-          # Motion / feel
           "editor.cursorBlinking" = "phase";
           "editor.cursorSmoothCaretAnimation" = "on";
           "editor.smoothScrolling" = true;
           "workbench.list.smoothScrolling" = true;
           "terminal.integrated.smoothScrolling" = true;
 
-          # Structure/readability
           "editor.bracketPairColorization.enabled" = true;
           "editor.guides.bracketPairs" = true;
           "editor.guides.indentation" = true;
@@ -123,7 +125,6 @@ in {
           "editor.minimap.maxColumn" = 80;
           "breadcrumbs.enabled" = true;
 
-          # Layout polish
           "workbench.layoutControl.enabled" = false;
           "workbench.activityBar.location" = "top";
           "window.titleBarStyle" = "custom";

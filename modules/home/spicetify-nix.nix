@@ -12,7 +12,7 @@ in {
       adblockify
       hidePodcasts
     ];
-    theme = lib.mkForce spicePkgs.themes.catppuccin;
-    colorScheme = lib.mkForce "mocha";
+    theme = lib.mkForce spicePkgs.themes.starryNight;
+    colorScheme = lib.mkForce "base";
   };
 }
