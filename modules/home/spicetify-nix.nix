@@ -13,6 +13,6 @@ in {
       hidePodcasts
     ];
     theme = lib.mkForce spicePkgs.themes.starryNight;
-    colorScheme = lib.mkForce "base";
+    colorScheme = lib.mkForce "Base";
   };
 }

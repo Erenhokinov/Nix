@@ -22,15 +22,19 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    prismlauncher-cracked = {
+      url = "github:Diegiwg/PrismLauncher-Cracked";
+    };
+
     noctalia = {
       url = "github:noctalia-dev/noctalia";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-#    ayugram-desktop = {
- #     type = "git";
-  #    submodules = true;
-   #   url = "https://github.com/ndfined-crp/ayugram-desktop/";
+    #    ayugram-desktop = {
+    #     type = "git";
+    #    submodules = true;
+    #   url = "https://github.com/ndfined-crp/ayugram-desktop/";
     #};
 
     spicetify-nix = {
@@ -59,8 +63,9 @@
     nix-flatpak,
     alejandra,
     spicetify-nix,
+    prismlauncher-cracked,
     aagl,
-#    ayugram-desktop,
+    #    ayugram-desktop,
     ...
   } @ inputs: let
     system = "x86_64-linux";

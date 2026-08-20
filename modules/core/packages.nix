@@ -44,6 +44,7 @@ in {
   environment.systemPackages = with pkgs;
     [
       awww
+      pkgs.prismlauncher
       inputs.synfetch.packages.${pkgs.stdenv.hostPlatform.system}.default
     ]
     ++ noctaliaPkgs

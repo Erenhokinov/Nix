@@ -58,11 +58,10 @@
     sha256 = pkgs.lib.fakeSha256;
   };
   synthwaveExts = extOrMarketplace {
-  publisher = "RobbOwen";
-  name = "synthwave-vscode";
-  version = "0.1.20";
-  sha256 = "sha256-J8igs+SQn967OK0PLNZtV9IOJRqwd+q9vmZ+p9eKSoU=";
-};
+    publisher = "RobbOwen";
+    name = "synthwave-vscode";
+    version = "0.1.20";
+    sha256 = "sha256-J8igs+SQn967OK0PLNZtV9IOJRqwd+q9vmZ+p9eKSoU=";
   };
 in {
   programs.vscode = {

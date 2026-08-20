@@ -153,20 +153,18 @@ in
             min-height: 0px;
           }
 
-          /* Сплошная единая полоса без зазоров, полупрозрачная */
           window#waybar {
             background-color: alpha(#${config.lib.stylix.colors.base00}, 0.75);
           }
 
-          /* Workspaces — точки-индикаторы */
           #workspaces {
             background: transparent;
             margin: 0px;
-            padding: 0px 8px;
+            padding: 0px 10px;
           }
           #workspaces button {
-            min-width: 10px;
-            min-height: 10px;
+            min-width: 13px;
+            min-height: 13px;
             padding: 0px;
             margin: 0px 6px;
             border-radius: 50%;
@@ -177,14 +175,13 @@ in
           #workspaces button.active {
             background-color: transparent;
             border: 2px solid #${config.lib.stylix.colors.base0D};
-            min-width: 12px;
-            min-height: 12px;
+            min-width: 14px;
+            min-height: 14px;
           }
           #workspaces button:hover {
             background-color: alpha(#${config.lib.stylix.colors.base0D}, 0.5);
           }
 
-          /* Остальные модули — без зазоров, вписаны в единую полосу */
           #window, #pulseaudio, #cpu, #memory, #idle_inhibitor,
           #custom-hyprbindings, #network, #battery,
           #custom-notification, #tray, #custom-exit, #clock, #custom-startmenu {
