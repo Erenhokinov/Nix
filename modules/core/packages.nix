@@ -95,6 +95,7 @@ in {
       pciutils # Collection Of Tools For Inspecting PCI Devices
       picard # For Changing Music Metadata & Getting Cover Art
       pkg-config # Wrapper Script For Allowing Packages To Get Info On Others
+      mpvpaper
       playerctl # Allows Changing Media Volume Through Scripts
       rhythmbox # audio player
       ripgrep # Improved Grep
