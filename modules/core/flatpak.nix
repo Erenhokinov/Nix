@@ -18,7 +18,7 @@
 
       # List the Flatpak applications you want to install
       packages = [
-        #   "org.vinegarhq.Sober" # Roblox client for Linux
+        "org.vinegarhq.Sober" # Roblox client for Linux
         "com.github.tchx84.Flatseal" #Manage flatpak permissions - should always have this
         #"com.rtosta.zapzap"              # WhatsApp client
         #"io.github.flattool.Warehouse"   # Manage flatpaks, clean data, remove flatpaks and deps

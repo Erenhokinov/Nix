@@ -96,7 +96,7 @@
   # Default background
   # Add new images to ~/zaneyos/wallpapers
   #stylixImage = ../../wallpapers/mountainscapedark.jpg;
-  stylixImage = ../../wallpapers/niev.jpg;
+  stylixImage = ../../wallpapers/wallhaven-yqg6r7_1920x1080.png;
   #stylixImage = ../../wallpapers/Anime-Purple-eyes.png;
   #stylixImage = ../../wallpapers/Rainnight.jpg;
   #stylixImage = ../../wallpapers/zaney-wallpaper.jpg;

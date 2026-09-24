@@ -50,6 +50,10 @@
       url = "github:SXSLVT/synfetch";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    wayvibes = {
+      url = "github:sahaj-b/wayvibes";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     alejandra = {
       url = "github:kamadorueda/alejandra";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -65,6 +69,7 @@
     spicetify-nix,
     prismlauncher-cracked,
     aagl,
+    wayvibes,
     #    ayugram-desktop,
     ...
   } @ inputs: let

@@ -57,13 +57,13 @@ in {
       ./wlogout
       ./xdg.nix
       ./yazi
-      #./zen-browser.nix
+      ./zen-browser.nix
       ./zoxide.nix
       ./zsh
       ./editors/vscode.nix
-      ./qutebrowser.nix
+      #./qutebrowser.nix
       #      ./ayugram-desktop.nix
-      ./discord.nix
+      #./discord.nix
       ./spicetify-nix.nix
     ]
     ++ (

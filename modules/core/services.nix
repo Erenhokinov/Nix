@@ -1,4 +1,8 @@
-{profile, ...}: {
+{
+  profile,
+  pkgs,
+  ...
+}: {
   # Services to start
   services = {
     upower.enable = true; # noctalia shell battery
@@ -27,6 +31,7 @@
         else true;
       autodetect = true;
     };
+
     pipewire = {
       enable = true;
       alsa.enable = true;
@@ -55,6 +60,23 @@
           }
         ];
       };
+    };
+  };
+
+  systemd.services.cpu-freq-cap = {
+    description = "Enable boost but cap CPU frequency at 3.1GHz";
+    wantedBy = ["multi-user.target"];
+
+    serviceConfig = {
+      Type = "oneshot";
+      RemainAfterExit = true;
+      ExecStart = pkgs.writeShellScript "cpu-freq-cap" ''
+        echo 1 > /sys/devices/system/cpu/cpufreq/boost
+        for cpu in /sys/devices/system/cpu/cpu*/cpufreq; do
+          echo performance > "$cpu/scaling_governor"
+          echo 2900000 > "$cpu/scaling_max_freq"
+        done
+      '';
     };
   };
 }

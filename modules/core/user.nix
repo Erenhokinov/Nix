@@ -18,7 +18,13 @@ in {
       imports = [
         ./../home
         inputs.spicetify-nix.homeManagerModules.default
+        inputs.wayvibes.nixosModules.default
       ];
+      services.wayvibes = {
+        enable = true;
+        soundpack = "/home/gnu/wayvibes/soundpacks/nk-cream";
+        volume = 2;
+      };
       home = {
         username = "${username}";
         homeDirectory = "/home/${username}";
@@ -41,6 +47,7 @@ in {
       "vboxusers" #Virtual Box
       "input"
       "uinput"
+      "ydotool"
     ];
     shell = pkgs.zsh;
     ignoreShellProgramCheck = true;

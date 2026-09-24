@@ -36,6 +36,13 @@ in {
       enable = true;
       enableSSHSupport = true;
     };
+    nix-ld.enable = true;
+    nix-ld.libraries = with pkgs; [
+      stdenv.cc.cc.lib
+      libGL
+      zlib
+    ];
+    ydotool.enable = true;
   };
 
   nixpkgs.config.allowUnfree = true;
@@ -53,6 +60,7 @@ in {
       appimage-run # Needed For AppImage Support
       brightnessctl # For Screen Brightness Control
       cliamp # terminal music player
+      devin-desktop
       cliphist # Clipboard manager using rofi menu
       cmatrix # Matrix Movie Effect In Terminal
       cowsay # Great Fun Terminal Program
@@ -71,7 +79,9 @@ in {
       gpu-screen-recorder # needed for noctalia-shell
       power-profiles-daemon # needed for noctalia-shell power cycle
       materialgram
+      ydotool
       mesa-demos # needed for inxi diag util
+      legcord
       tuigreet # The Login Manager (Sometimes Referred To As Display Manager)
       htop # Simple Terminal Based System Monitor
       eog # For Image Viewing

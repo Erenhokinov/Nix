@@ -4,6 +4,8 @@
       "https://cache.nixos.org"
       "https://hyprland.cachix.org"
       "https://nix-community.cachix.org"
+      "https://cachyos.cachix.org"
+      "https://cache.cachyos.org"
     ];
     trusted-public-keys = lib.mkAfter [
       "hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="
