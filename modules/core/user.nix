@@ -22,7 +22,7 @@ in {
       ];
       services.wayvibes = {
         enable = true;
-        soundpack = "/home/gnu/wayvibes/soundpacks/nk-cream";
+        soundpack = "/home/gnu/.local/share/wayvibes/nk-cream";
         volume = 2;
       };
       home = {

@@ -1,4 +1,9 @@
-{host, ...}: let
+{
+  host,
+  lib,
+  pkgs,
+  ...
+}: let
   inherit (import ../../hosts/${host}/variables.nix) amdgpuID nvidiaID;
 in {
   imports = [
@@ -21,4 +26,8 @@ in {
   drivers.intel.enable = false;
 
   vm.guest-services.enable = false;
+
+  specialisation.cachyos.configuration = {
+    boot.kernelPackages = lib.mkForce pkgs.linuxPackages_cachyos-bore;
+  };
 }

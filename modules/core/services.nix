@@ -10,7 +10,7 @@
     fstrim.enable = true; # SSD Optimizer
     gvfs.enable = true; # For Mounting USB & More
     power-profiles-daemon.enable = true;
-    cloudflare-warp.enable = true;
+    cloudflare-warp.enable = false;
     openssh = {
       enable = true; # Enable SSH
       settings = {

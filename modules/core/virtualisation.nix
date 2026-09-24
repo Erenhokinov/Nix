@@ -2,13 +2,13 @@
   # Only enable either docker or podman -- Not both
   virtualisation = {
     docker = {
-      enable = true;
+      enable = false;
     };
 
     podman.enable = false;
 
     libvirtd = {
-      enable = true;
+      enable = false;
     };
 
     virtualbox.host = {

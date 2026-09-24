@@ -81,7 +81,7 @@ in {
       materialgram
       ydotool
       mesa-demos # needed for inxi diag util
-      legcord
+      vesktop
       tuigreet # The Login Manager (Sometimes Referred To As Display Manager)
       htop # Simple Terminal Based System Monitor
       eog # For Image Viewing

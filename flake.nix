@@ -7,6 +7,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
 
     aagl = {
       url = "github:ezKEa/aagl-gtk-on-nix";
@@ -63,6 +64,7 @@
   outputs = {
     nixpkgs,
     home-manager,
+    chaotic,
     nixvim,
     nix-flatpak,
     alejandra,
@@ -91,6 +93,8 @@
         modules = [
           ./modules/core/overlays.nix
           ./profiles/${gpuProfile}
+          chaotic.nixosModules.nyx-cache
+          chaotic.nixosModules.nyx-overlay
           nix-flatpak.nixosModules.nix-flatpak
           inputs.aagl.nixosModules.default
         ];
