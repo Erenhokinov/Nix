@@ -9,7 +9,7 @@
     libinput.enable = true; # Input Handling
     fstrim.enable = true; # SSD Optimizer
     gvfs.enable = true; # For Mounting USB & More
-    power-profiles-daemon.enable = true;
+    power-profiles-daemon.enable = false;
     cloudflare-warp.enable = false;
     openssh = {
       enable = true; # Enable SSH

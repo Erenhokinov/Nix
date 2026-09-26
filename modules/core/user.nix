@@ -48,6 +48,7 @@ in {
       "input"
       "uinput"
       "ydotool"
+      "video"
     ];
     shell = pkgs.zsh;
     ignoreShellProgramCheck = true;

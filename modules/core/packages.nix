@@ -36,6 +36,7 @@ in {
       enable = true;
       enableSSHSupport = true;
     };
+    gamemode.enable = true;
     nix-ld.enable = true;
     nix-ld.libraries = with pkgs; [
       stdenv.cc.cc.lib
